@@ -1,0 +1,81 @@
+@use '../../scss/' as *;
+
+.future-forecast {
+    @include flex(center, center);
+    background: rgba(24,24,27, 0.8);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+
+    @include tablet {
+        justify-content: start;
+        align-items: unset;
+        overflow-y: scroll;
+    }
+
+    @include mobile {
+        justify-content: start;
+        align-items: unset;
+        overflow-y: scroll;
+    }
+
+    .current-temp {
+        @include flex(center, center);
+        border: 1px solid #eee;
+        border-radius: 10px;
+        margin-right: 10px;
+
+        &__other {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            margin: 10px 0;
+            width: 160px;
+
+            &__day {
+                padding: 5px 15px;
+                background: #3c3c44;
+                border-radius: 50px;
+                text-align: center;
+            }
+    
+            &__temp {
+                font-size: 18px;
+                padding-top: 15px;
+                @include flex(center, space-between);
+
+                @include mobile {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+
+    .weather-forecast {
+        display: flex;
+
+        &__item {
+            @include flex(unset, center);
+            flex-direction: column;
+            margin: 0 10px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            width: 160px;
+
+            &__day {
+                padding: 5px 15px;
+                background: #3c3c44;
+                border-radius: 50px;
+                text-align: center;
+            }
+
+            &__temp {
+                font-weight: 100;
+                @include flex(center, space-between);
+            }
+        }
+    }
+}

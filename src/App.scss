@@ -1,0 +1,60 @@
+@use "./scss/" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: 100%;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background-image: url('./assets/imgs/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $txt-color;
+  overflow: hidden;
+  height: 100vh;
+
+  @include mobile {
+      margin-bottom: 3rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+    outline: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1660px;
+  padding: 20px 70px;
+
+  @include mobile {
+    padding: 8px;
+  }
+}
+
+.section {
+  padding: 0 2rem;
+}
+
+.section__header {
+  @include flex(center, space-between);
+}

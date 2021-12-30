@@ -1,0 +1,71 @@
+@use '../../scss/' as *;
+
+.current-info {
+    @include flex(unset, space-between);
+    flex-wrap: wrap;
+
+    .date-container {
+        font-weight: 100;
+        width: 360px;
+
+        &__time {
+            font-size: 70px;
+
+            @include mobile {
+                font-size: 40px;
+            }
+        }
+
+        &__date {
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        &__other {
+            display: flex;
+            flex-direction: column;
+            background: rgba(24, 24, 27, 0.6);
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: $border-radius;
+            margin: 10px 0;
+
+            &__item {
+                @include flex(unset, space-between);
+
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .place-container {
+        text-align: end;
+
+        @include mobile {
+            margin-top: 15px;
+        }
+
+        @include tablet {
+            margin-top: 15px;
+        }
+
+        .time-zone {
+            font-weight: 100;
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        .country {
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+}
